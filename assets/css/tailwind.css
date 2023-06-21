@@ -29,7 +29,7 @@
     }
 
     .top-header{
-        @apply w-full h-10 bg-[#091FE6] py-2;
+        @apply w-full md:h-10 bg-[#091FE6] py-2;
     }
     .top-header p{
         @apply text-[14px] text-white opacity-80;

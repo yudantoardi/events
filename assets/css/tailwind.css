@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    *{
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html,body{
+        @apply bg-[#F2F2F4];
+    }
+
+    .ratio{
+        @apply w-full h-0 relative;
+    }
+    .ratio img{
+        @apply absolute top-0 left-0 w-full h-full object-cover;
+    }
+    .ratio.ratio-1{
+        @apply pt-[100%];
+    }
+    .ratio.ratio-16{
+        @apply pt-[57.97%];
+    }
+
+    .wrapper{
+        @apply w-full mx-auto max-w-6xl px-4;
+    }
+
+    .top-header{
+        @apply w-full h-10 bg-[#091FE6] py-2;
+    }
+    .top-header p{
+        @apply text-[14px] text-white opacity-80;
+    }
+    .socmed-group a{
+        @apply px-1 mx-1 text-white opacity-60;
+    }
+
+    .bottom-header{
+        @apply h-[80px] py-1 flex justify-center;
+    }
+    .bottom-header img{
+        @apply w-full h-full object-contain;
+    }
+
+    .main-content{
+        @apply pb-20;
+    }
+
+    .section-title{
+        @apply w-full relative pt-12 text-center;
+    }
+    .section-title .shadow-text{
+        @apply text-7xl md:text-[128px] text-gray-200 font-bold;
+    }
+    .section-title h3{
+        @apply text-3xl md:text-5xl text-[#091FE6] -translate-y-8 md:-translate-y-20 font-bold;
+    }
+
+    
+
+    footer{
+        @apply bg-gray-900;
+    }
+    footer p{
+        @apply text-sm text-gray-200 p-4;
+    }
+
+    .page-nav{
+        @apply flex items-center justify-center space-x-2 mt-10;
+    }
+    .page-nav a{
+        @apply p-2 w-10 h-10 text-center rounded-md hover:bg-gray-300;
+    }
+    .page-nav a.active{
+        @apply bg-[#091FE6] text-gray-100;
+    }
+
+    .hero-slider .owl-prev,
+    .hero-slider .owl-next{
+        @apply w-10 h-10 md:w-14 md:h-14 absolute top-1/2 -translate-y-1/2 -indent-96 overflow-hidden bg-white opacity-30 hover:opacity-100 transition-all}
+    .hero-slider .owl-prev{
+        @apply left-4 bg-[url(../images/bt-prev.png)] bg-contain;
+    }
+    .hero-slider .owl-next{
+        @apply right-4 bg-[url(../images/bt-next.png)] bg-contain;
+    }
+
+    .hero-slider .owl-pagination{
+        @apply flex items-center justify-center space-x-2 w-full absolute left-0 bottom-4 md:bottom-10;
+    }
+    .hero-slider .owl-pagination .owl-page span{
+        @apply block w-1.5 h-1.5 bg-white opacity-30 transition-all rounded-full;
+    }
+    .hero-slider .owl-pagination .owl-page.active span{
+        @apply opacity-100 w-10;
+    }
+    .hero-slider .item{
+        @apply relative py-20 md:py-0;
+    }
+    .hero-slider .item img.bg-img{
+        @apply w-full h-full absolute top-0 left-0 object-cover blur-sm;
+    }
+    .hero-slider .item img.front-img{
+        @apply relative z-10 object-contain;
+    }
+
+    .events-list .event-item{
+        @apply block md:flex items-center overflow-hidden relative p-4 md:p-0 bg-white md:bg-none;
+    }
+    .events-list.mode-1 .event-item{
+        @apply rounded-none mb-4 rounded-lg hover:rounded-lg md:rounded-none bg-none hover:bg-white border-b hover:border-none border-b-gray-300 md:space-x-6 py-6 md:p-7 md:pl-0 min-h-[180px] shadow-none hover:shadow-xl transition-all;
+    }
+    .events-list.mode-2 .event-item{
+        @apply rounded-xl mb-8 bg-white shadow-none hover:shadow-lg transition-all;
+    }
+    .events-list .event-item .pic{
+        @apply relative;
+    }
+    .events-list.mode-1 .event-item .pic{
+        @apply w-[80px] md:w-[200px] h-full mb-4 md:mb-0;;
+    }
+    .events-list.mode-2 .event-item .pic{
+        @apply w-full md:w-[450px] mr-6 before:w-full overflow-hidden
+        before:h-full before:absolute before:top-0 before:left-0 before:bg-black before:opacity-40 before:z-[1];
+    }
+    .events-list.mode-1 .event-item .pic img{
+        @apply rounded-xl;
+    }
+    .events-list.mode-2 .event-item .pic img{
+        @apply rounded-xl;
+    }
+    .events-list .event-item .date{
+        @apply z-10 font-bold text-sm top-0 left-0 transition-all;
+    }
+    .events-list.mode-1 .event-item .date{
+        @apply w-full md:w-[220px] md:px-6 md:py-9 bg-white text-left md:text-center text-[#20BD07] relative h-full rounded-t-lg md:rounded-l-lg mb-4 md:mb-0;
+    }
+    .events-list.mode-2 .event-item .date{
+        @apply absolute top-0 left-0 p-10 md:p-6 text-white;
+    }
+    .events-list.mode-1 .event-item:hover .date{
+        @apply md:bg-[#20BD07] md:text-white;
+    }
+    .events-list.mode-1 .event-item .date .num{
+        @apply relative z-10;
+    }
+    .events-list.mode-1 .event-item .date::before{
+        content: "";
+        width: 100%;
+        height: 0;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: #20BD07;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transition: all ease-out 0.3s;
+        -webkit-transition: all ease-out 0.3s;
+        -moz-transition: all ease-out 0.3s;
+        -ms-transition: all ease-out 0.3s;
+        -o-transition: all ease-out 0.3s;
+        z-index: 0;
+    }
+    .events-list.mode-1 .event-item:hover .date::before{
+        height: 400px;
+    }
+    .events-list.mode-1 .event-item .date::after{
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        opacity: 0;
+        background: #20BD07;
+        transform: rotate(-45deg) translate(50%,-50%);
+        -webkit-transform: rotate(-45deg) translate(50%,-50%);
+        -moz-transform: rotate(-45deg) translate(50%,-50%);
+        -ms-transform: rotate(-45deg) translate(50%,-50%);
+        -o-transform: rotate(-45deg) translate(50%,-50%);
+        transition: all ease-out 0.3s;
+        -webkit-transition: all ease-out 0.3s;
+        -moz-transition: all ease-out 0.3s;
+        -ms-transition: all ease-out 0.3s;
+        -o-transition: all ease-out 0.3s;
+    }
+    .events-list.mode-1 .event-item:hover .date::after{
+        opacity: 1;
+    }
+    .events-list .event-item .date span{
+        @apply inline md:block w-full md:text-4xl font-bold;
+    }
+    .events-list .event-item .text{
+        @apply pr-6;
+    }
+    .events-list.mode-2 .event-item .text{
+        @apply py-6;
+    }
+    .events-list .event-item .text h3{
+        @apply text-[16px] md:text-2xl font-bold text-gray-950 mb-3;
+    }
+    .events-list .event-item .text p{
+        @apply text-[12px] md:text-sm text-gray-700 mb-4 md:mb-0;
+    }
+    .events-list .event-item .cta{
+        @apply w-[200] flex items-center justify-between space-x-4 md:space-x-0 md:block;
+    }
+    .events-list.mode-2 .event-item .cta{
+        @apply md:p-6;
+    }
+    .events-list .event-item .cta a{
+        @apply w-[100px] md:w-full bg-[#091FE6] hover:bg-gray-800 text-white text-sm font-semibold block py-3 md:px-14 rounded-md text-center;
+    }
+    .events-list .event-item .cta .ticket-price{
+        @apply mb-0 md:mb-4 text-center text-[#DF7910];
+    }
+    .events-list .event-item .cta .ticket-price span{
+        @apply font-bold;
+    }
+    .events-list .event-item .cta .ticket-price i{
+        @apply -rotate-45 mr-2;
+    }
+
+    @media only screen and (max-width: 768px){
+        .events-list.mode-1 .event-item .date::after,
+        .events-list.mode-1 .event-item .date::before{
+            display: none;
+        }
+        .events-list.mode-2 .event-item .pic::before{
+            border-radius: 12px;
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 12px;
+            -ms-border-radius: 12px;
+            -o-border-radius: 12px;
+}
+    }
+}

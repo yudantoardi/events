@@ -1,0 +1,23 @@
+{
+  "name": "events",
+  "version": "1.0.0",
+  "description": "HTML of Event Schedule list",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yudantoardi/events.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yudantoardi/events/issues"
+  },
+  "homepage": "https://github.com/yudantoardi/events#readme",
+  "dependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}

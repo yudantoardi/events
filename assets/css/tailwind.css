@@ -197,7 +197,7 @@
         @apply inline md:block w-full md:text-4xl font-bold;
     }
     .events-list .event-item .text{
-        @apply pr-6;
+        @apply pr-6 mb-6 md:mb-0;
     }
     .events-list.mode-2 .event-item .text{
         @apply py-6;
@@ -206,10 +206,13 @@
         @apply text-[16px] md:text-2xl font-bold text-gray-950 mb-3;
     }
     .events-list .event-item .text p{
-        @apply text-[12px] md:text-sm text-gray-700 mb-4;
+        @apply text-[12px] md:text-sm text-gray-700 mb-5;
     }
     .events-list .event-item .text a.link{
-        @apply text-[12px] text-[#20BD07] hover:underline;
+        @apply text-[12px] text-white bg-[#DF7910] py-2 px-4 rounded-md hover:underline;
+    }
+    .events-list.mode-2 .event-item .text{
+        @apply mb-0;
     }
     .events-list .event-item .cta{
         @apply w-[200] flex items-center justify-between space-x-4 md:space-x-0 md:block;

@@ -1009,10 +1009,19 @@ footer p {
 
 @media (min-width: 768px) {
   .events-list .event-item .text p {
-    margin-bottom: 0px;
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+}
+
+.events-list .event-item .text a.link {
+  font-size: 12px;
+  --tw-text-opacity: 1;
+  color: rgb(32 189 7 / var(--tw-text-opacity));
+}
+
+.events-list .event-item .text a.link:hover {
+  text-decoration-line: underline;
 }
 
 .events-list .event-item .cta {
@@ -1211,26 +1220,6 @@ footer p {
   --tw-backdrop-sepia:  ;
 }
 
-.col-span-1 {
-  grid-column: span 1 / span 1;
-}
-
-.col-span-3 {
-  grid-column: span 3 / span 3;
-}
-
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-
-.col-span-5 {
-  grid-column: span 5 / span 5;
-}
-
-.col-span-7 {
-  grid-column: span 7 / span 7;
-}
-
 .col-span-4 {
   grid-column: span 4 / span 4;
 }
@@ -1249,10 +1238,6 @@ footer p {
 
 .w-full {
   width: 100%;
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-cols-12 {

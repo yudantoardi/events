@@ -220,17 +220,64 @@
     .events-list.mode-2 .event-item .cta{
         @apply md:p-6;
     }
-    .events-list .event-item .cta a{
+    .cta a{
         @apply w-[100px] md:w-full bg-[#091FE6] hover:bg-gray-800 text-white text-sm font-semibold block py-3 md:px-14 rounded-md text-center;
     }
-    .events-list .event-item .cta .ticket-price{
+    .cta .ticket-price{
         @apply mb-0 md:mb-4 text-center text-[#DF7910];
     }
-    .events-list .event-item .cta .ticket-price span{
+    .cta .ticket-price span{
         @apply font-bold;
     }
-    .events-list .event-item .cta .ticket-price i{
+    .cta .ticket-price i{
         @apply -rotate-45 mr-2;
+    }
+
+    .event-detail{
+        @apply block md:flex items-center p-8 my-8 bg-white;
+    }
+    .event-detail .pic{
+        @apply w-full md:w-2/5 mb-8 md:mb-0;
+    }
+    .event-detail .pic img{
+        @apply w-full object-contain border border-gray-200;
+    }
+    .event-detail .text{
+        @apply w-full md:w-3/5 pl-0 md:pl-8;
+    }
+    .event-detail .text h1{
+        @apply text-3xl font-bold mb-4;
+    }
+    .event-detail .text .meta-info{
+        @apply mb-4;
+    }
+    .event-detail .text .meta-info p{
+        @apply text-xs text-gray-500 mb-2;
+    }
+    .event-detail .text .meta-info p i{
+        @apply mr-1;
+    }
+    .event-detail .text .article{
+        @apply text-sm leading-normal text-justify mb-8;
+    }
+    .event-detail .text .cta{
+        @apply flex items-center mb-8;
+    }
+    .event-detail .text .cta .ticket-price{
+        @apply w-[70%] mb-0 text-right pr-6;
+    }
+    .event-detail .text .cta a{
+        @apply w-[30%];
+    }
+
+    .share-box{
+        @apply w-full border border-gray-300 p-3;
+    }
+    .share-box span{
+        @apply text-xs;
+    }
+    .share-box a{
+        @apply float-right ml-6 hover:text-blue-700;
     }
 
     @media only screen and (max-width: 768px){
